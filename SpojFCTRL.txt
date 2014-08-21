@@ -1,0 +1,30 @@
+using System;
+
+public class Test
+{
+	private static int NumberOfZeroes(int num)
+	{
+		int divisor = 5;
+		int zeroes = 0;
+
+		while(divisor <= num)
+		{
+			zeroes+= num/divisor;
+			divisor = divisor*5;
+		}
+	
+		return zeroes;
+	}
+		
+	public static void Main(string[] args)
+	{
+		int n = Int32.Parse(Console.ReadLine());
+		while(n>0)
+		{
+			Console.WriteLine(NumberOfZeroes(Int32.Parse(Console.ReadLine())));
+			n--;
+		}
+	}
+}
+
+
